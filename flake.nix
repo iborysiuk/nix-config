@@ -19,14 +19,16 @@
   };
   
   outputs = { self, nixpkgs, disko, nixos-hardware, home-manager }: {
-    vagrant = nixpkgs.lib.nixosSystem {
-      modules = [
-        disko.nixosModules.disko
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        ./users/vagrant.nix
-        ./hosts/vagrant
-      ];
-    };
+    nixosConfigurations = {
+      vagrant = nixpkgs.lib.nixosSystem {
+        modules = [
+          disko.nixosModules.disko
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          ./users/vagrant.nix
+          ./hosts/vagrant
+        ];
+      };
+    };    
   };
 }
