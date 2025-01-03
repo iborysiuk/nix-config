@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./disko-config.nix
-    ./hardware-configuration.nix
+    ./hardware-configuration.nix    
+    ./disko-config.nix    
   ];
       
   networking = {
@@ -15,7 +15,6 @@
     grub = {
       enable = true;
       efiSupport = true;
-      device = "nodev";
       efiInstallAsRemovable = true;
     };
   };
