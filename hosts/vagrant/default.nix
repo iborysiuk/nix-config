@@ -14,7 +14,7 @@
     initrd = { checkJournalingFS = false; };
     efi = {
       canTouchEfiVariables = false;
-      efiSysMountPoint = "/boot/efi"; 
+      efiSysMountPoint = "/boot"; 
     };
     grub = {
       enable = true;
