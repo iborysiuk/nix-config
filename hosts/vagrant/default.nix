@@ -13,10 +13,7 @@
   boot = {
     initrd = { checkJournalingFS = false; };
     loader = {
-      efi = {
-        canTouchEfiVariables = false;
-        efiSysMountPoint = "/boot/efi"; 
-      };  
+      efi = { canTouchEfiVariables = false; };  
       grub = {
         enable = true;
         efiSupport = true;
