@@ -12,15 +12,17 @@
   
   boot = {
     initrd = { checkJournalingFS = false; };
-    efi = {
-      canTouchEfiVariables = false;
-      efiSysMountPoint = "/boot"; 
-    };
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-      efiInstallAsRemovable = true;
+    loader = {
+      efi = {
+        canTouchEfiVariables = false;
+        efiSysMountPoint = "/boot"; 
+      };  
+      grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        efiInstallAsRemovable = true;
+      };
     };
   };
   
