@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./disko-config.nix    
+    ./disko-config.nix
+    ./hardware-configuration.nix
   ];
       
   networking = {
