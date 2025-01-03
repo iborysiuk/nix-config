@@ -12,10 +12,6 @@
 
   boot.initrd.checkJournalingFS = false;
   boot.loader = {
-    efi = { 
-      canTouchEfiVariables = false; 
-      efiSysMountPoint = "/boot";
-    };  
     grub = {
       enable = true;
       efiSupport = true;
