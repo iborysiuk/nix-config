@@ -12,11 +12,13 @@
 
   boot.initrd.checkJournalingFS = false;
   boot.loader = {
-    efi.canTouchEfiVariables = false;
+    efi = {
+      canTouchEfiVariables = true;      
+    };
     grub = {
-      enable = true;
       efiSupport = true;
       efiInstallAsRemovable = true;
+      device = "nodev";
     };
   };
   
