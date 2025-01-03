@@ -13,7 +13,7 @@
   boot.initrd.checkJournalingFS = false;
   boot.loader = {
     efi = {
-      canTouchEfiVariables = true;      
+      canTouchEfiVariables = false;      
     };
     grub = {
       efiSupport = true;
