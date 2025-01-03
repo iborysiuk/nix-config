@@ -15,7 +15,6 @@
             ESP = {
               size = "512M";
               type = "EF00";
-              fs-type = "fat32";
               content = {
                 type = "filesystem";
                 format = "vfat";
