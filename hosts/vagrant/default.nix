@@ -9,17 +9,18 @@
   networking = {
     hostName = "nixbox";
   };
-  
-  boot = {
-    initrd = { checkJournalingFS = false; };
-    loader = {
-      efi = { canTouchEfiVariables = false; };  
-      grub = {
-        enable = true;
-        efiSupport = true;
-        device = "nodev";
-        efiInstallAsRemovable = true;
-      };
+
+  boot.initrd.checkJournalingFS = false;
+  boot.loader = {
+    efi = { 
+      canTouchEfiVariables = false; 
+      efiSysMountPoint = "/boot" 
+    };  
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      efiInstallAsRemovable = true;
     };
   };
   
