@@ -25,17 +25,17 @@
         ];
         shell = pkgs.zsh;
         packages = with pkgs; [];
-               
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          users.vagrant = {
-            home = {
-              stateVersion = "24.11";
-            };
-          };
-        };        
       };
     };    
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.vagrant = {
+      home = {
+        stateVersion = "24.11";
+      };
+    };
   };
 }
