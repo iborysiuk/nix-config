@@ -2,7 +2,6 @@
 
 {
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;     
 
   networking = {
     networkmanager = {
@@ -45,7 +44,9 @@
     ];
   };
 
-  programs = {};
+  programs = {
+    zsh = { enable = true; };
+  };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {
