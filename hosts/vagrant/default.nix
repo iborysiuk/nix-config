@@ -12,16 +12,14 @@
 
   boot.initrd.checkJournalingFS = false;
   boot.loader = {
-    #efi = {
-     # canTouchEfiVariables = false;
-     # efiSysMountPoint = "/boot/efi";      
-    #};
-    grub = {
-      enable = true;
-      efiSupport = true;
-      efiInstallAsRemovable = true;
-      device = "nodev";
-    };
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;                
+#    grub = {
+#      enable = true;
+#      efiSupport = true;
+#      efiInstallAsRemovable = true;
+#      device = "nodev";
+#    };
   };
   
   services = {
