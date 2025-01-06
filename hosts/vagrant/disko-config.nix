@@ -2,15 +2,14 @@
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/nvme0n1";
         type = "disk";
+        device = "/dev/nvme0n1";
         content = {
           type = "gpt";
           partitions = {
             boot = {
               size = "1M";
               type = "EF02";
-              priority = 1;
             };
             esp = {
               size = "512M";
@@ -18,8 +17,7 @@
               content = {
                 type = "filesystem";
                 format = "vfat";
-                mountpoint = "/boot/efi";
-                mountOptions = [ "umask=0077" ];
+                mountpoint = "/boot";
               };
             };
             root = {
@@ -30,7 +28,7 @@
                 mountpoint = "/";
               };
             };
-            plainSwap = {
+            swap = {
               size = "100%";
               content = {
                 type = "swap";
