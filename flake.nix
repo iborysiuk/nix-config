@@ -9,16 +9,16 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };    
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
+#    nixos-hardware = {
+#      url = "github:NixOS/nixos-hardware/master";
+#    };
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };    
   };
   
-  outputs = { self, nixpkgs, disko, nixos-hardware, home-manager }: {
+  outputs = { self, nixpkgs, disko, home-manager }: {
     nixosConfigurations = {
       vagrant = nixpkgs.lib.nixosSystem {
         modules = [
